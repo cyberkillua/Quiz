@@ -3,38 +3,46 @@
     <div>
       <p>{{ ques.question }}</p>
       <!-- <p v-html="ques.question"></p> -->
-      <input
-        type="radio"
-        id="true"
-        :value="ques.incorrect_answers[0]"
-        v-model="picked"
-        @change="emitCustomEvent"
-      />
-      <label for="true">{{ ques.incorrect_answers[0] }}</label>
-      <input
-        type="radio"
-        id="true"
-        :value="ques.incorrect_answers[1]"
-        v-model="picked"
-        @change="emitCustomEvent"
-      />
-      <label for="true">{{ ques.incorrect_answers[1] }}</label>
-      <input
-        type="radio"
-        id="true"
-        :value="ques.incorrect_answers[2]"
-        v-model="picked"
-        @change="emitCustomEvent"
-      />
-      <label for="true">{{ ques.incorrect_answers[2] }}</label>
-      <input
-        type="radio"
-        id="false"
-        :value="ques.correct_answer"
-        v-model="picked"
-        @change="emitCustomEvent"
-      />
-      <label for="false">{{ ques.correct_answer }}</label>
+      <label for="true">
+        <input
+          type="radio"
+          id="true"
+          :value="ques.incorrect_answers[0]"
+          v-model="picked"
+          @change="emitCustomEvent"
+        />
+        {{ ques.incorrect_answers[0] }}</label
+      >
+      <label for="true"
+        ><input
+          type="radio"
+          id="true"
+          :value="ques.incorrect_answers[1]"
+          v-model="picked"
+          @change="emitCustomEvent"
+        />
+        {{ ques.incorrect_answers[1] }}</label
+      >
+      <label for="true"
+        ><input
+          type="radio"
+          id="true"
+          :value="ques.incorrect_answers[2]"
+          v-model="picked"
+          @change="emitCustomEvent"
+        />
+        {{ ques.incorrect_answers[2] }}</label
+      >
+      <label for="false"
+        ><input
+          type="radio"
+          id="false"
+          :value="ques.correct_answer"
+          v-model="picked"
+          @change="emitCustomEvent"
+        />
+        {{ ques.correct_answer }}</label
+      >
     </div>
   </div>
 </template>
@@ -62,4 +70,7 @@ export default {
 </script>
 
 <style scoped>
+label {
+  display: block;
+}
 </style>
